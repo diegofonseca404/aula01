@@ -18,7 +18,10 @@
 </head>
 <body>
     <div>
-        <h1 style="background-color: black; color: white">Meu nome é {Nome}</h1>
+        <h1><?php echo "Hello World"; ?></h1>
+    </div>
+    <div>
+        <h1 style="background-color: black; color: white">Meu nome é {Nome} </h1>
     </div>    
     <div>
         <p id="paragrafo1" class="paragrafo">
