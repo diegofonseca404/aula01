@@ -1,0 +1,16 @@
+php é fracamente tipado e dinamicamente tipado.
+<?php          \\ tag de inicialização, não é necessário fechar tag se for apenas código PHP.
+$a = 1;        \\ declarando uma variável do tipo inteiro
+$a = "2"       \\ declarando uma variável do tipo string
+
+if (true) { }				\\ condifional
+while (true) { }			\\ loop condicional
+for($i = 1; $i < 10; $i++) { }		\\ loop contado
+
+$list = [1,2,3,4,5,6,7,8,9]; 		\\ array
+$list['123'] = '456'; 			\\ atribuindo valor ao indice 123
+foreach($list as $num) {echo $num; }	\\ loop em array
+echo "Hi!";  				\\ imprimir
+print_r($a);				\\ imprimir variavel
+var_dump($a);				\\ visualizar tipo
+
