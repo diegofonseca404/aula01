@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head> <title>Document</title> </head>
+<body>
+    <div id="app">
+        <h1>{{ pessoa.nome }}</h1>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        // php -S 127.0.0.1:80
+        // http://www.mocky.io/v2/5d1e8eba3000000bcad72660
+        var app = new Vue({
+            el: '#app',
+            data: {
+                pessoa: {nome: "Paula"}
+            },
+            mounted() {
+                axios
+                 .get("http://www.mocky.io/v2/5d1e8eba3000000bcad72660")
+                 .then(response => {
+                     console.log(response)
+                     this.pessoa = response.data
+                 })        
+            }
+        })
+        // Baixar o composer.phar
+        // curl -sS https://getcomposer.org/installer | php
+
+        // Baixar o projeto laravel
+        // composer create-project --prefer-dist laravel/laravel blog
+        // ou
+        // php composer.phar create-project --prefer-dist laravel/laravel blog
+
+        // Depois da instalação
+        // cd blog              <<<< abrir pasta do projeto
+        // php artisan serve    <<<< Iniciar servidor artisan
+    </script>
+</body>
+</html>
